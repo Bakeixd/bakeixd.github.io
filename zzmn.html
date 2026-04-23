@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html><!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZZMN Project</title>
+
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="responsive.css">
+
+<style>
+:root {
+  --primary: #5A3EF5;
+  --bg: #ffffff;
+  --text: #111;
+  --gradient: linear-gradient(135deg,#7B5CFF,#A98BFF);
+}
+.cover {
+  background:#7B5CFF;
+  color:#fff;
+  text-align:center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+    min-height: 100vh;
+
+}
+.cover h1 {
+  font-size:48px;
+  font-weight:700;
+}
+.cover p {
+  margin-top:16px;
+  opacity:.9;
+}
+.cover img {
+  max-width:320px;
+  margin-top:40px;
+}
+.zzmn_logo{
+  width: 40%!important;
+  height: auto!important;
+  object-fit: contain !important;
+}
+.zzmn-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.zzmn-item {
+  text-align: center;
+}
+
+.zzmn-item .img {
+  max-width: 180px;
+  margin: 0 auto 20px;
+}
+
+.zzmn-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.zzmn-item p {
+  font-size: 16px;
+  margin-top: 8px;
+}
+.campaign-row {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.campaign-track {
+  display: flex;
+  gap: 30px;
+  animation: slideLoop 20s linear infinite;
+}
+
+.campaign-row:active {
+  cursor: grabbing;
+}
+
+
+.campaign-item {
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
+  transform: scale(0.9);
+  opacity: 1;
+  transition: 0.4s;
+  transform: scale(0.9);
+
+}
+.campaign-item.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.campaign-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+    user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.campaign-item.small {
+  width: 260px;
+  aspect-ratio: 3 / 4;
+}
+
+.campaign-item.wide {
+  width: 480px;
+  aspect-ratio: 16 / 9;
+}
+
+.campaign-item:hover {
+  transform: translateY(-8px);
+}
+.campaign-item.small {
+  width: 320px;
+  aspect-ratio: 3 / 4;
+}
+
+.campaign-item.wide {
+  width: 520px;
+  aspect-ratio: 16 / 9;
+}
+.campaign-row:hover .campaign-track {
+  animation-play-state: paused;
+}
+
+@keyframes slideLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.link-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.link-card span {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+  .zzmn-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .zzmn-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="cover">
+  <div class="inner">
+    <img class="zzmn_logo" src="images/zzmn/zzmn_logo.png" alt="">
+    <h1>아이 용돈 고민 쯤이야<br>ZZMN이 해결해드립니다</h1>
+    <p style="color: #fff;">미션 기반 보상 시스템으로<br>아이의 습관을 만드는 서비스</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+    <h2>프로젝트 개요</h2>
+    <p>
+      ZZMN은 미션과 보상 구조를 통해 아이의 행동 습관을 형성하도록 돕는  
+      참여형 리워드 서비스입니다.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+    <h2>Problem</h2>
+    <p>
+      아이는 반복적인 행동을 쉽게 포기하고,<br>
+      부모는 이를 지속적으로 관리하기 어렵습니다.<br><br>
+      보상 없는 행동은 오래 유지되지 않는다는 문제가 있습니다.
+    </p>
+        <p>
+    아이에게 중요한 것은 '의무'가 아니라<br>
+    즉각적인 보상과 성취 경험입니다.
+  </p>
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="inner">
+
+    <h2>UI · UX Preview</h2>
+
+    <div class="zzmn-grid">
+
+      <div class="zzmn-item">
+        <img src="images/zzmn/6.5_1.png" class="img">
+        <h3>#회원가입</h3>
+        <p>카카오 연동으로 간편한 시작</p>
+      </div>
+
+      <div class="zzmn-item">
+        <img src="images/zzmn/6.5_2.png" class="img">
+        <h3>#미션현황</h3>
+        <p>진행률 시각화로 참여 유도</p>
+      </div>
+
+      <div class="zzmn-item">
+        <img src="images/zzmn/6.5_3.png" class="img">
+        <h3>#미션만들기</h3>
+        <p>가족 맞춤 미션 설정</p>
+      </div>
+
+      <div class="zzmn-item">
+        <img src="images/zzmn/6.5_4.png" class="img">
+        <h3>#미션인증</h3>
+        <p>사진 기반 인증</p>
+      </div>
+
+      <div class="zzmn-item">
+        <img src="images/zzmn/6.5_5.png" class="img">
+        <h3>#미션완료</h3>
+        <p>보상으로 행동 강화</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section gray">
+  <div class="inner">
+    <h2>Core Value</h2>
+
+    <div class="flex">
+
+      <div class="card">
+        <h3>동기부여</h3>
+        <p>즉각적인 보상 제공으로 행동 참여 유도</p>
+      </div>
+
+      <div class="card">
+        <h3>지속성</h3>
+        <p>반복 가능한 미션 구조로 습관 형성 지원</p>
+      </div>
+
+      <div class="card">
+        <h3>관계</h3>
+        <p>부모와 아이가 함께 참여하는 경험 설계</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section gray">
+  <div class="inner">
+
+    <h2>Marketing & Growth</h2>
+    <p style="margin-bottom:60px;">
+      ZZMN은 실제 사용자 참여를 유도하기 위해 다양한 채널을 활용한 마케팅을 진행했습니다.
+    </p>
+
+<div class="campaign-row">
+
+  <div class="campaign-track" style="animation: slideLoop 30s linear infinite; margin-bottom: 20px;">
+
+    <div class="campaign-item small">
+    <img src="images/zzmn/마케팅용_1200_2@3x.png">
+    </div>
+    <div class="campaign-item small">
+    <img src="images/zzmn/마케팅용_1200_3@3x.png">
+    </div>
+    <div class="campaign-item wide">
+    <img src="images/zzmn/헤더이미지@3x.png">
+    </div>
+
+
+    <div class="campaign-item wide">
+      <img src="images/zzmn/zzmn_01.png">
+    </div>
+
+    <div class="campaign-item wide">
+      <img src="images/zzmn/zzmn_02.png">
+    </div>
+
+
+
+
+
+
+    <div class="campaign-item wide">
+      <img src="images/zzmn/010.png">
+    </div>
+
+  </div>
+
+</div>
+
+  <div class="flex" >
+
+    <a href="https://page.stibee.com/subscriptions/213270" target="_blank" class="card link-card">
+      <h3>뉴스레터 캠페인</h3>
+      <p>구독 기반 유저 유입 및 참여 유도</p>
+      <span>→ 바로가기</span>
+    </a>
+
+    <a href="https://www.instagram.com/zzmn_challenge/" target="_blank" class="card link-card">
+      <h3>인스타그램</h3>
+      <p>SNS 카듀느스 홍보</p>
+      <span>→ 바로가기</span>
+    </a>
+
+    <a href="https://zep.us/play/yO14MZ" target="_blank" class="card link-card">
+      <h3>ZEP 체험</h3>
+      <p>가상공간 체험 제공</p>
+      <span>→ 바로가기</span>
+    </a>
+
+  </div>
+
+  </div>
+</section>
+<section class="section">
+  <div class="inner">
+
+    <h2>Brand & Character Design</h2>
+    <p style="margin-bottom:60px;">
+      ZZMN의 캐릭터는 단순한 비주얼 요소를 넘어  
+      서비스 경험을 직관적으로 전달하는 핵심 요소로 설계되었습니다.
+    </p>
+
+    <div class="character-grid">
+
+      <div class="character-item">
+        <img src="images/zzmn/c_3.jpg">
+        <h4>Brand Identity</h4>
+        <p>서비스의 첫 인상을 형성하는 캐릭터</p>
+      </div>
+
+      <div class="character-item">
+        <img src="images/zzmn/c_1.jpg">
+        <h4>Reward Experience</h4>
+        <p>보상과 성취를 시각적으로 표현</p>
+      </div>
+
+      <div class="character-item">
+        <img src="images/zzmn/c_2.jpg">
+        <h4>Mission Experience</h4>
+        <p>미션 참여와 행동 유도를 돕는 요소</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+</section>
+
+<section class="section gray">
+  <div class="inner">
+
+    <h2>Logo Design</h2>
+
+
+    <div class="character-grid">
+
+      <div class="character-item">
+        <img src="images/zzmn/logo_01.jpg">
+      </div>
+
+      <div class="character-item">
+        <img src="images/zzmn/logo_02.jpg">
+      </div>
+
+
+
+    </div>
+
+  </div>
+</section>
+<section class="section">
+  <div class="inner">
+    <h2>Impact</h2>
+
+    <div class="flex">
+
+      <div class="card">
+        <h3>참여 유도 구조 설계</h3>
+        <p>
+          미션 → 인증 → 보상 흐름을 통해<br>
+          사용자의 반복 참여 행동 패턴 설계
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>행동 데이터 확보</h3>
+        <p>
+          사용자 참여 데이터를 기반으로<br>
+          서비스 확장 가능성 검증
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>서비스 방향성 검증</h3>
+        <p>
+          리워드 기반 UX가 실제 행동 변화에<br>
+          긍정적인 영향을 줄 수 있음을 확인
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+    const elements = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+<script>
+
+
+function stopAutoSlide() {
+  clearInterval(autoSlide);
+}
+
+row.addEventListener('mousedown', (e) => {
+  isDown = true;
+  row.classList.add('dragging');
+  startX = e.pageX - row.offsetLeft;
+  scrollLeft = row.scrollLeft;
+  stopAutoSlide();
+});
+
+row.addEventListener('mouseleave', () => {
+  isDown = false;
+  startAutoSlide();
+});
+
+row.addEventListener('mouseup', () => {
+  isDown = false;
+  startAutoSlide();
+});
+
+row.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - row.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  row.scrollLeft = scrollLeft - walk;
+});
+
+row.addEventListener('mouseenter', stopAutoSlide);
+row.addEventListener('mouseleave', startAutoSlide);
+
+window.addEventListener('load', () => {
+  updateSlider();
+  startAutoSlide();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.inner {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(120deg, #F8FAFF 0%, #EEF3FF 100%);
+}
+
+.hero-inner {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-main h1 {
+  font-size: 64px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+}
+
+.hero-main h1 span {
+  color: var(--primary);
+  position: relative;
+}
+
+.hero-main h1 span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 10px;
+  background: var(--sub);
+  border-radius: 6px;
+  z-index: -1;
+}
+
+.hero-desc {
+  margin-top: 40px;
+  font-size: 18px;
+  color: #6B7280;
+  line-height: 1.9;
+  max-width: 720px;
+  word-break: keep-all;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 80px;
+  margin-top: 80px;
+}
+
+.hero-meta span {
+  display: block;
+  font-size: 14px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.hero-meta p {
+  font-size: 15px;
+  color: var(--light);
+  line-height: 1.8;
+  max-width: 360px;
+  word-break: keep-all;
+}
+
+.about-project-wrap {
+  background: #fff;
+}
+
+.about-intro {
+  padding: 180px 0 100px;
+}
+
+.about-intro h2 {
+  font-size: 48px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+}
+
+.about-intro p {
+  margin-top: 40px;
+  font-size: 18px;
+  color: #6B7280;
+  line-height: 1.9;
+  max-width: 720px;
+  word-break: keep-all;
+}
+
+.project-flow {
+  margin-top: 80px;
+}
+
+.project-line {
+  display: block;
+  padding: 100px 8%;
+  border-top: 1px solid #E5E9F2;
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.4s;
+}
+
+.project-line span {
+  font-size: 14px;
+  color: var(--light);
+}
+
+.project-line h2 {
+  font-size: 56px;
+  margin: 20px 0;
+  font-weight: 500;
+  transition: 0.4s;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+}
+
+.project-line p {
+  font-size: 16px;
+  color: #7C8596;
+  word-break: keep-all;
+}
+
+.project-line:hover {
+  background: #EEF3FF;
+}
+
+.project-line:hover h2 {
+  color: var(--primary);
+  transform: translateX(12px);
+}
+
+.hero-inner,
+.about-intro,
+.project-line {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--primary);
+  width: 0%;
+  z-index: 9999;
+}
+/* footer */
+
+.footer {
+  padding: 200px 0;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+
+.footer-text {
+  font-size: 28px;
+  line-height: 1.6;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+
+.footer-line {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--primary);
+  margin: 40px auto;
+  opacity: 0.6;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+
+.footer-sub {
+  font-size: 14px;
+  color: var(--light);
+  opacity: 0;
+}
+
+
+.footer-text:hover {
+  color: var(--primary);
+}
+
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.fade-up.show .footer-line {
+  transform: scaleX(1);
+  transition: 0.6s ease 0.4s;
+}
+
+.fade-up.show .footer-sub {
+  opacity: 1;
+  transition: 0.6s ease 0.8s;
+}
+
+@media(max-width:1200px){
+
+  .inner,
+  .hero-inner {
+    width: 90%;
+  }
+
+  .hero-main h1 {
+    font-size: 40px;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-intro h2 {
+    font-size: 32px;
+  }
+
+  .project-line h2 {
+    font-size: 36px;
+  }
+
+  @media print {
+  body {
+    background: #fff;
+  }
+
+  .hero-main,
+  .project-line,
+  .footer {
+    page-break-inside: avoid;
+  }
+}
+}

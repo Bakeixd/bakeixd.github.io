@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전북대학교 발전지원재단 기부금 키오스크 UIUX</title>
+
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="responsive.css">
+
+<style>
+:root {
+  --primary:#004386;
+  --bg:#ffffff;
+  --text:#111;
+}
+
+.cover {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.cover-video {
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index:1;
+  filter: blur(8px) brightness(0.7);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.5);
+  z-index:2;
+}
+
+.cover .inner {
+  position: relative;
+  z-index:3;
+}
+.cover p{
+  color: #fff;
+  font-size: 16px;
+}
+
+.section.gray {
+  background:#F5F7FB;
+}
+
+@media(max-width:768px){
+  .cover-video {
+    display:none;
+  }
+
+  .cover {
+    background: linear-gradient(135deg, #004386, #0059b3);
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- cover -->
+<section class="cover">
+
+  <video class="cover-video" autoplay muted loop playsinline>
+    <source src="images/intro.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="inner">
+    <h1>기부금 키오스크 UI·UX</h1>
+    <p>편리한 서비스를 위한 직관적인 인터페이스 디자인</p>
+  </div>
+
+</section>
+
+<!-- overview -->
+<section class="section">
+  <div class="inner">
+    <h2>프로젝트 개요</h2>
+    <p>
+      본 프로젝트는 전북대학교 발전지원재단에서 사용되는 기부금 키오스크 UX를 설계한 작업입니다.  
+      사용자가 짧은 시간 안에 정보를 이해하고 자연스럽게 선택할 수 있도록  
+      직관적인 구조와 간결한 인터페이스를 중심으로 경험을 설계했습니다.
+    </p>
+  </div>
+</section>
+
+
+<!-- goal -->
+<section class="section gray">
+  <div class="inner">
+    <h2>설계 목표</h2>
+
+    <div class="flex">
+      <div class="card">
+        <h3>빠른 탐색</h3>
+        <p>최소한의 단계로 원하는 정보에 접근</p>
+      </div>
+
+      <div class="card">
+        <h3>직관적인 인터랙션</h3>
+        <p>터치 기반 환경에 최적화된 UI 설계</p>
+      </div>
+
+      <div class="card">
+        <h3>명확한 정보 전달</h3>
+        <p>시각적 계층을 통한 가독성 향상</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- main -->
+<section class="section">
+  <div class="inner flex">
+    <img src="images/kiosk-main01.png" class="img">
+    <img src="images/kiosk-main02.png" class="img">
+
+    <div>
+      <h3>메인 화면</h3>
+      <p>
+        주요 기능을 한눈에 확인할 수 있도록 카드형 UI로 구성하여  
+        사용자가 빠르게 기능을 선택할 수 있도록 설계했습니다.  
+
+        기부자 검색, 정보 확인 등 핵심 기능을 직관적으로 배치하여  
+        인지 부담을 줄이고 탐색 효율을 높였습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- detail -->
+<section class="section gray">
+  <div class="inner flex reverse">
+    <img src="images/kiosk-detail.png" class="img">
+
+    <div>
+      <h3>정보 화면</h3>
+      <p>
+        기부자 정보와 기부 금액을 강조하여  
+        중요한 정보가 빠르게 인지될 수 있도록 구성했습니다.  
+
+        시각적 계층을 통해 사용자가 자연스럽게 정보를 읽을 수 있도록 설계했습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- search -->
+<section class="section">
+  <div class="inner flex">
+    <img src="images/kiosk-search.png" class="img">
+
+    <div>
+      <h3>검색 UX</h3>
+      <p>
+        이름 및 기업명 검색 기능을 통해  
+        사용자가 원하는 정보를 빠르게 찾을 수 있도록 구성했습니다.  
+
+        입력부터 결과 확인까지의 흐름을 단순화하여  
+        키오스크 환경에 적합한 사용자 경험을 제공합니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- result -->
+<section class="section gray">
+  <div class="inner flex reverse">
+    <img src="images/kiosk-result01.png" class="img">
+    <img src="images/kiosk-result02.png" class="img">
+
+    <div>
+      <h3>검색 결과</h3>
+      <p>
+        결과를 카드형 UI로 제공하여 정보 탐색을 쉽게 하고  
+        주요 데이터를 강조하여 시각적 집중도를 높였습니다.  
+
+        사용자가 빠르게 비교하고 선택할 수 있도록 구성했습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ux -->
+<section class="section">
+  <div class="inner">
+    <h2>UX 설계 포인트</h2>
+
+    <div class="flex">
+      <div class="card">
+        <h3>구조 단순화</h3>
+        <p>불필요한 단계를 제거하여 빠른 이해 유도</p>
+      </div>
+
+      <div class="card">
+        <h3>터치 최적화</h3>
+        <p>큰 버튼과 명확한 인터랙션 설계</p>
+      </div>
+
+      <div class="card">
+        <h3>정보 강조</h3>
+        <p>핵심 데이터를 시각적으로 강조</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<script>
+const elements = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
