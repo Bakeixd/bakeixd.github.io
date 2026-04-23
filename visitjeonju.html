@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visit Jeonju Project</title>
+
+<link rel="stylesheet" href="main.css">
+
+<style>
+:root {
+  --primary: #0A7B34;
+  --bg: #ffffff;
+  --text: #111;
+}
+
+.tab {
+  display:flex;
+  gap:12px;
+  margin-top:40px;
+}
+.tab li {
+  list-style:none;
+  padding:6px 14px;
+  border-radius:20px;
+  border:1px solid #ddd;
+  cursor:pointer;
+  font-size:14px;
+}
+.tab li.on {
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+.chart-box {
+  margin-top:40px;
+  background:#fff;
+  border-radius:20px;
+  padding:24px;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#visitorChart,
+#treemapChart {
+  height:300px;
+}
+
+.chart-desc {
+  margin-top:20px;
+  text-align:center;
+  color:#555;
+}
+.persona-section {
+  text-align: center;
+}
+
+.persona-img-wrap {
+  margin-top: 40px;
+}
+
+.persona-img {
+  width: 100%;
+  max-width: 900px; 
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.persona-desc {
+  margin-top: 40px;
+  font-size: 18px;
+  color: #555;
+}
+.strategy-img-group {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap; /* 줄바꿈 */
+  margin-top: 40px;
+}
+
+.strategy-img-group .img {
+  max-width: 260px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.strategy-img-group .img:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5"></script>
+</head>
+
+<body>
+
+<section class="cover">
+  <img src="images/vj/intro.jpg" class="cover-img">
+  <div class="overlay"></div>
+  <div class="cover-content">
+    <h1>VISIT JEONJU</h1>
+    <p>전주의 매력을 더 깊이 경험하는 여행 플랫폼</p>
+  </div>
+</section>
+<section class="section">
+  <div class="inner">
+    <h2>프로젝트 개요</h2>
+    <p>
+      전주 관광 데이터를 기반으로 체류형 여행 경험을 설계하고  
+      사용자 흐름 중심 UX를 구축한 프로젝트입니다.
+    </p>
+  </div>
+</section>
+<section class="section">
+  <div class="inner">
+
+    <h2>방문자 수 추이</h2>
+
+    <p>
+      전주 방문자 수는 전반적으로 증가 추세를 보이며  
+      관광 수요는 지속적으로 확대되고 있습니다.
+    </p>
+
+    <div class="chart-box">
+      <img src="images/vj/visit-chart.png" style="width:100%;">
+    </div>
+
+  </div>
+</section>
+
+<section class="section gray">
+  <div class="inner">
+    <h2>관광 소비 패턴 분석</h2>
+
+    <ul class="tab region-tab">
+      <li class="on">덕진구</li>
+      <li>완산구</li>
+    </ul>
+
+    <ul class="tab type-tab">
+      <li class="on">내국인</li>
+      <li>현지인</li>
+      <li>외지인</li>
+    </ul>
+
+    <div class="chart-box">
+      <div id="treemapChart"></div>
+    </div>
+    <p class="chart-desc">
+      방문자는 증가했지만 대부분 당일치기 여행에 머물며  
+      숙박과 체류시간이 감소하는 문제가 발생하고 있습니다.    </p>
+
+  </div>
+</section>
+<section class="section gray">
+  <div class="inner persona-section">
+
+    <h2>Persona</h2>
+
+    <div class="persona-img-wrap">
+      <img src="images/vj/14.jpg" class="persona-img">
+    </div>
+
+    <p class="persona-desc">
+      여행 경험이 부족하고 정보 탐색에 어려움을 느끼는 사용자로  
+      직관적인 정보 구조와 추천 콘텐츠가 필요합니다.
+    </p>
+
+  </div>
+</section>
+<section class="section">
+  <div class="inner">
+    <h2>UX 개선 방향</h2>
+
+    <div class="flex">
+      <div class="card">
+        <h3>체류형 관광 유도</h3>
+        <p>숙박 및 야간 콘텐츠 강화</p>
+      </div>
+      <div class="card">
+        <h3>추천 코스 제공</h3>
+        <p>테마 및 일정 기반 여행 설계</p>
+      </div>
+      <div class="card">
+        <h3>소비 흐름 연결</h3>
+        <p>식음료 → 숙박 → 체험으로 확장</p>
+      </div>
+      <div class="card">
+        <h3>SNS 활용</h3>
+        <p>트렌드 기반 유입 강화</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="section">
+  <div class="inner persona-section">
+
+    <h2>Mood Board</h2>
+
+    <div class="persona-img-wrap">
+      <img src="images/vj/17.jpg" class="persona-img">
+    </div>
+
+  </div>
+</section>
+
+<section class="section gray">
+  <div class="inner persona-section">
+
+    <h2>Design Concept</h2>
+
+    <div class="persona-img-wrap">
+      <img src="images/vj/18.jpg" class="persona-img">
+    </div>
+
+    <p class="persona-desc">
+      카드형 UI와 콘텐츠 중심 구조로  
+      사용자가 빠르게 정보를 탐색할 수 있도록 설계했습니다.
+    </p>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner persona-section">
+
+    <h2>Design System</h2>
+
+    <div class="persona-img-wrap">
+      <img src="images/vj/16.jpg" class="persona-img">
+    </div>
+
+
+  </div>
+</section>
+<section class="section gray">
+  <div class="inner">
+    <h2>UX 개선</h2>
+
+<div class="strategy-img-group">
+  <img src="images/vj/20.jpg" class="img modal-target">
+  <img src="images/vj/21.jpg" class="img modal-target">
+  <img src="images/vj/22.jpg" class="img modal-target">
+  <img src="images/vj/23.jpg" class="img modal-target">
+</div>
+  </div>
+</section>
+
+<section class="outro">
+  <div class="inner">
+    <h2>전주 여행, 더 깊이 경험하도록</h2>
+  </div>
+</section>
+<div class="modal">
+  <img class="modal-img">
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+  const chart = echarts.init(document.getElementById('treemapChart'));
+
+  const data = [
+    [
+      [
+        {name:'식음료', value:57, itemStyle:{color:'#4E6CB3'}},
+        {name:'쇼핑', value:20, itemStyle:{color:'#8BC47C'}},
+        {name:'관광', value:13, itemStyle:{color:'#F2C14E'}},
+        {name:'숙박', value:10, itemStyle:{color:'#E76464'}}
+      ],
+      [
+        {name:'쇼핑', value:50, itemStyle:{color:'#8BC47C'}},
+        {name:'식음료', value:30, itemStyle:{color:'#4E6CB3'}}
+      ],
+      [
+        {name:'식음료', value:40, itemStyle:{color:'#4E6CB3'}},
+        {name:'관광', value:30, itemStyle:{color:'#F2C14E'}}
+      ]
+    ],
+    [
+      [
+        {name:'식음료', value:55, itemStyle:{color:'#4E6CB3'}},
+        {name:'쇼핑', value:25, itemStyle:{color:'#8BC47C'}}
+      ],
+      [
+        {name:'쇼핑', value:45, itemStyle:{color:'#8BC47C'}},
+        {name:'식음료', value:35, itemStyle:{color:'#4E6CB3'}}
+      ],
+      [
+        {name:'관광', value:40, itemStyle:{color:'#F2C14E'}},
+        {name:'식음료', value:30, itemStyle:{color:'#4E6CB3'}}
+      ]
+    ]
+  ];
+
+  let region = 0;
+  let type = 0;
+
+  function render(){
+    chart.setOption({
+        series:[{
+          type:'treemap',
+          data:data[region][type],
+
+          roam:false,
+          nodeClick:false,
+          emphasis:{ disabled:true },
+          breadcrumb:{ show:false },
+
+          itemStyle: {
+            borderRadius: 12,
+            borderColor: '#fff',
+            borderWidth: 4,
+            gapWidth: 4
+          },
+        label: {
+          show: true,
+          fontSize: 15,
+          fontWeight: '700',
+          color: '#fff',
+          lineHeight: 20,
+          overflow: 'break',
+          formatter: function(params){
+            return params.name + '\n' + params.value + '%';
+          }
+        },
+        labelLayout: function (params) {
+          if (params.rect.width < 60 || params.rect.height < 40) {
+            return { hide: true };
+          }
+        }
+      }]
+    });
+  }
+
+  render();
+
+  document.querySelectorAll('.region-tab li').forEach((t,i)=>{
+    t.onclick=()=>{
+      document.querySelectorAll('.region-tab li').forEach(v=>v.classList.remove('on'));
+      t.classList.add('on');
+      region=i;
+      render();
+    }
+  });
+
+  document.querySelectorAll('.type-tab li').forEach((t,i)=>{
+    t.onclick=()=>{
+      document.querySelectorAll('.type-tab li').forEach(v=>v.classList.remove('on'));
+      t.classList.add('on');
+      type=i;
+      render();
+    }
+  });
+
+});
+</script>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+sections.forEach(sec => observer.observe(sec));
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+  const modal = document.querySelector('.modal');
+  const modalImg = document.querySelector('.modal-img');
+  const images = document.querySelectorAll('.modal-target');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  const count = document.querySelector('.modal-count');
+
+  let currentIndex = 0;
+
+  function updateImage() {
+    modalImg.src = images[currentIndex].src;
+    count.innerText = (currentIndex + 1) + ' / ' + images.length;
+  }
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      modal.classList.add('active');
+      currentIndex = index;
+      updateImage();
+    });
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage();
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('active')) return;
+
+    if (e.key === 'Escape') modal.classList.remove('active');
+    if (e.key === 'ArrowRight') {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage();
+    }
+    if (e.key === 'ArrowLeft') {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage();
+    }
+  });
+
+});
+</script>
+
+</body>
+</html>
