@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphic Works</title>
+
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="etc.css">
+<link rel="stylesheet" href="responsive.css">
+
+</head>
+<style>
+  :root {
+  --bg: #F5F7F9;
+  --bg-soft: #EEF2F6;
+  --text: #1F2937;
+  --sub-text: #6B7280;
+  --point: #56C4B3;
+  }
+
+  .cover {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #EAF3F1, #DCEEEA);
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(86,196,179,0.35), transparent 70%);
+  top: -100px;
+  left: -100px;
+  animation: float1 8s ease-in-out infinite;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(86,196,179,0.15), transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  animation: float2 10s ease-in-out infinite;
+}
+.cover-content h1 {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -2px;
+}
+
+.cover-content p {
+  color: var(--sub-text);
+  font-size: 18px;
+  margin-top: 10px;
+}
+.cover-content span {
+  color: var(--point);
+}
+@keyframes float1 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(80px, 60px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-60px, -80px); }
+  100% { transform: translate(0,0); }
+}
+
+
+
+</style>
+<body>
+
+<section class="cover">
+  <div class="cover-content">
+    <h1>Graphic Works</h1>
+    <p>그래픽 · 편집 · 개인 작업물을 정리한 페이지</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+
+    <h2>Graphic Works</h2>
+    <p class="desc">
+      그래픽 · 편집 · 개인 작업물을 정리한 페이지입니다.
+    </p>
+
+    <ul class="work-tab">
+      <li class="on" data-tab="tab1">그래픽 작업물</li>
+      <li data-tab="tab2">편집 디자인</li>
+      <li data-tab="tab3">개인 작업물</li>
+    </ul>
+
+    <div class="work-grid active" id="tab1">
+      <div class="work-item">
+        <h3>농촌진흥청 e-HRD 러닝맵 인포그래픽 디자인</h3>
+        <p>
+          농촌진흥청 인적자원개발센터 e-HRD 시스템 교육 페이지에 활용된 인포그래픽형 그래픽 작업입니다.<br>
+          교육 과정을 직관적으로 이해할 수 있도록 단계별 흐름 구조와 시각 요소를 중심으로 구성했습니다.
+        </p>
+
+        <div class="work-images">
+          <img src="작업물/ehrd/러닝맵_02-01_w.png">
+          <img src="작업물/ehrd/러닝맵_02-02_w.png">
+          <img src="작업물/ehrd/러닝맵_02-03_w.png">
+        </div>
+      </div>
+
+      <div class="work-item">
+        <h3>익산시 테니스협회 팝업 디자인</h3>
+        <p>
+          월별 주요 행사 및 대회 정보를 전달하기 위한 팝업 배너 디자인입니다.<br>
+          정보 가독성과 시각적 강조를 중심으로 구성했습니다.
+        </p>
+
+        <div class="work-images">
+          <img src="작업물/팝업이미지/익산시테니스협회10월팝업_추가2.jpg">
+          <img src="작업물/팝업이미지/익산시테니스협회11월_3.png">
+          <img src="작업물/팝업이미지/익산시테니스협회12월팝업.png">
+          <img src="작업물/팝업이미지/241107_익산테니스협회 대회.png">
+        </div>
+      </div>
+
+      <div class="work-item">
+        <h3>홈팁스 배너 디자인</h3>
+        <p>
+          정부 지원 및 육아 정보를 전달하기 위한 배너 디자인 작업입니다.<br>
+          직관적인 타이포그래피와 친근한 일러스트를 활용해 가독성과 전달력을 강화했습니다.
+        </p>
+
+        <div class="work-images">
+
+          <img src="작업물/홈팁스/배너이미지/20230911육아지원정보.png">
+          <img src="작업물/홈팁스/배너이미지/20231023돈이되는육아정보.png">
+          <img src="작업물/홈팁스/배너이미지/돈이되는소식_231010.png">
+          <img src="작업물/홈팁스/배너이미지/돈이되는육아정보_20230918.jpg">
+          <img src="작업물/홈팁스/배너이미지/돈이되는육아정보_20231016.png">
+
+          <img src="작업물/홈팁스/배너이미지/돈이되는정부소식_20230918.jpg">
+          <img src="작업물/홈팁스/배너이미지/돈이되는정부소식_20231004.png">
+          <img src="작업물/홈팁스/배너이미지/돈이되는정부소식230807.jpg">
+          <img src="작업물/홈팁스/배너이미지/돈이되는정부소식230814.jpg">
+          <img src="작업물/홈팁스/배너이미지/돈이되는정부소식20230821.png">
+
+          <img src="작업물/홈팁스/배너이미지/육아지원소식20230814.jpg">
+          <img src="작업물/홈팁스/배너이미지/육아지원정보_231010.png">
+          <img src="작업물/홈팁스/배너이미지/육아지원정보_20231004.png">
+          <img src="작업물/홈팁스/배너이미지/육아지원정보230725.jpg">
+          <img src="작업물/홈팁스/배너이미지/육아지원정보20230821.png">
+
+          <img src="작업물/홈팁스/배너이미지/231030_돈이되는정부소식.png">
+          <img src="작업물/홈팁스/배너이미지/20230828돈이되는육아정보.jpg">
+          <img src="작업물/홈팁스/배너이미지/20230828돈이되는정부소식.jpg">
+          <img src="작업물/홈팁스/배너이미지/20230905돈이되는정부소식.jpg">
+          <img src="작업물/홈팁스/배너이미지/20230905육아지원정보.jpg">
+
+        </div>
+      </div>
+
+      <div class="work-item">
+        <h3>홈팁스 카드뉴스 디자인</h3>
+        <p>
+          맞벌이 가구와 육아 가정을 위한 정부 지원 정책을 카드뉴스 형태로 제작했습니다.<br>
+          정보 전달력을 높이기 위해 시각적 흐름과 스토리 구조를 중심으로 구성했습니다.
+        </p>
+
+        <div class="work-images">
+
+          <img src="작업물/홈팁스/카드뉴스/card_01.jpg">
+          <img src="작업물/홈팁스/카드뉴스/card_02.jpg">
+          <img src="작업물/홈팁스/카드뉴스/card_03.jpg">
+          <img src="작업물/홈팁스/카드뉴스/card_04.jpg">
+          <img src="작업물/홈팁스/카드뉴스/card_05.jpg">
+          <img src="작업물/홈팁스/카드뉴스/card_06.jpg">
+        </div>
+        <div class="work-images">
+          <img src="작업물/홈팁스/카드뉴스/h_card_07.png">
+          <img src="작업물/홈팁스/카드뉴스/h_card_01.png">
+          <img src="작업물/홈팁스/카드뉴스/h_card_02.png">
+          <img src="작업물/홈팁스/카드뉴스/h_card_03.png">
+          <img src="작업물/홈팁스/카드뉴스/h_card_04.png">
+          <img src="작업물/홈팁스/카드뉴스/h_card_05.png">
+          <img src="작업물/홈팁스/카드뉴스/h_card_06.png">
+          <img src="작업물/홈팁스/카드뉴스/h_card_08.png">
+
+        </div>
+      </div>
+
+    </div>
+<div class="work-grid" id="tab2">
+
+  <div class="work-item">
+    
+    <h3>홈팁스 리플렛 디자인</h3>
+    <p>
+      홈팁스가 제공하는 다양한 기능 정보를 전달하기 위해
+      제작된 홍보 리플렛 디자인입니다.
+    </p>
+    <div class="work-images">
+      <img src="작업물/홈팁스/리플렛/리플렛_목업.png" class="modal-target">
+      <img src="작업물/홈팁스/리플렛/에픽모바일_홈팁스_리플렛1.jpg" class="modal-target">
+      <img src="작업물/홈팁스/리플렛/에픽모바일_홈팁스_리플렛2.jpg" class="modal-target">
+    </div>
+
+  </div>
+
+  <div class="work-item">
+  <h3>나우리 홍보 디자인</h3>
+  <p>
+    기업 홍보를 위한 리플렛 및 배너 디자인 작업으로,<br>
+    정보 전달력과 브랜드 아이덴티티를 고려해 제작했습니다.
+  </p>
+
+  <div class="work-images">
+    <img src="작업물/나우리 홍보지/나우리 홍보지.png">
+    <img src="작업물/나우리 홍보지/물통배너 목업적용이미지.png">
+  </div>
+
+</div>
+
+  <div class="work-item">
+    <h3>원네이처 리플렛 · 홍보물 디자인</h3>
+    <p>
+      제품 홍보 및 브랜드 소개를 위한 리플렛 및 이벤트 포스터 디자인입니다.
+    </p>
+
+    <div class="work-images">
+      <img src="작업물/이전작업물/리플렛1.jpg">
+      <img src="작업물/이전작업물/리플렛2.jpg">
+      <img src="작업물/이전작업물/리플렛3.jpg">
+      <img src="작업물/이전작업물/원네이쳐_리플렛4.jpg">
+    </div>
+  </div>
+
+
+  </div>
+
+</div>
+
+
+
+</div>
+
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+  <div class="work-grid" id="tab3">
+    <div class="inner">
+      <div class="work-item">
+        <h3>명함 디자인</h3>
+        <p>
+          다양한 콘셉트의 명함 디자인으로,<br>
+          브랜드 이미지와 개성을 시각적으로 표현한 작업입니다.
+        </p>
+        <div class="work-images">
+          <img src="작업물/이전작업물/명함1_0.1.png">
+          <img src="작업물/이전작업물/명함2.jpg" >
+          <img src="작업물/이전작업물/명함3.jpg" >
+          <img src="작업물/이전작업물/명함5.png" >
+        </div>
+      </div>
+
+    <div class="work-item">
+      <h3>칵테일 바 메뉴판 디자인</h3>
+      <p>
+        홈칵테일 바를 위한 메뉴판 디자인으로,<br>
+        다크한 배경과 레드 포인트 컬러를 활용해<br>
+        강렬한 분위기와 콘셉트를 표현했습니다.
+      </p>
+
+      <div class="work-images">
+        <img src="작업물/이전작업물/meunu.png">
+
+      </div>
+    </div>
+
+      <div class="work-item">
+        <h3>패키지 디자인</h3>
+        <p>
+      제품 콘셉트에 맞춘 패키지 디자인 작업으로,
+      브랜딩과 시각 요소를 함께 고려해 제작했습니다.
+        </p>
+      <div class="package-left hotspot-wrap">
+        <img src="작업물/이전작업물/도면도.png" class="origin-img">
+      
+        <!-- 1. 상단 플랩 -->
+        <div class="hotspot" style="top:27%; left:24%;">
+      <span class="dot"></span>
+      <div class="tooltip">
+        <img src="작업물/이전작업물/도면도상세뷰01.png">
+        <div class="tooltip-text">
+          <strong>상단 플랩 디자인</strong>
+          <p>
+            캐릭터의 눈 모양을 활용한 구조 디자인으로<br>
+            브랜드 아이덴티티를 강조했습니다.
+          </p>
+        </div>
+      </div>
+        </div>
+      
+        <!-- 2. 아이콘 영역 -->
+        <div class="hotspot" style="top:31%; left:60%;">
+      <span class="dot"></span>
+      <div class="tooltip">
+        <img src="작업물/이전작업물/도면도상세뷰02.png">
+        <div class="tooltip-text">
+          <strong>아이콘 그래픽</strong>
+          <p>
+            주요 기능을 직관적인 아이콘으로 구성하여<br>
+            정보 전달력을 높였습니다.
+          </p>
+        </div>
+      </div>
+        </div>
+      
+        <!-- 3. 캐릭터 영역 -->
+        <div class="hotspot" style="top:52%; left:60%;">
+      <span class="dot"></span>
+      <div class="tooltip">
+        <img src="작업물/이전작업물/도면도상세뷰03.png">
+        <div class="tooltip-text">
+          <strong>캐릭터 그래픽</strong>
+          <p>
+            친근한 캐릭터와 컬러 조합으로<br>
+            시각적 접근성을 높였습니다.
+          </p>
+        </div>
+      </div>
+        </div>
+      
+      </div>
+        <div class="mockup-palette-wrap">
+      <!-- 목업 -->
+      <div class="mockup-area">
+        <img src="작업물/이전작업물/구강카메라_패키지목업.png" class="modal-target">
+      </div>
+      <!-- 컬러 팔레트 -->
+      <div class="color-palette">
+        <h4>COLOR PALETTE</h4>
+        <div class="palette-list">
+          <div class="color-item">
+            <span style="background:#56C4B3"></span>
+            <p>#56C4B3</p>
+          </div>
+          <div class="color-item">
+            <span style="background:#FFF2D6"></span>
+            <p>#FFF2D6</p>
+          </div>
+          <div class="color-item">
+            <span style="background:#F2A6A6"></span>
+            <p>#F2A6A6</p>
+          </div>
+        </div>
+      </div>
+      
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-img" id="modal-img">
+</div>
+
+
+<script src="etc.js"></script>
+
+</body>
+</html>
